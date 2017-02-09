@@ -1,0 +1,25 @@
+{
+  "name": "react-router-redux",
+  "version": "1.0.0",
+  "description": "react-router-redux init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luojionghuang/react-router-redux.git"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "redux",
+    "webpack"
+  ],
+  "author": "ljh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luojionghuang/react-router-redux/issues"
+  },
+  "homepage": "https://github.com/luojionghuang/react-router-redux#readme"
+}
