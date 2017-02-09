@@ -5,12 +5,13 @@ module.exports = {
         'index': __dirname + '/src/index.jsx'
     },
     output: {
-        path: __dirname,
-        filename: __dirname + '/dist/[name].js'
+        path: __dirname + '/dist',
+        filename: '[name].js'
     },
     module: {
         loaders: [{
             test: /\.jsx|\.js$/,
+            exclude: /node_modules/,
             loader: 'babel-loader'
         }]
     },
