@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/luojionghuang/react-router-redux/issues"
   },
-  "homepage": "https://github.com/luojionghuang/react-router-redux#readme"
+  "homepage": "https://github.com/luojionghuang/react-router-redux#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
 }
