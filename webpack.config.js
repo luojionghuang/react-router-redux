@@ -11,7 +11,7 @@ module.exports = {
         publicPath: path.join(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.css']
+        extensions: ['.js', '.jsx', '.css']//自动识别没带后缀的文件，在import、require或者webpack.config.js中
     },
     module: {
         loaders: [{
@@ -24,6 +24,14 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.BannerPlugin('This file is created by ljh')
+        new webpack.BannerPlugin('This file is created by ljh'),//文件头部加上作者名称：ljh
+        new webpack.optimize.UglifyJsPlugin({//压缩webpack打包的文件
+            compress: {
+                warnings: false
+            },
+            output: {
+                comments: false
+            }
+        })
     ]
 };
