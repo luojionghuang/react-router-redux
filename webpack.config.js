@@ -1,17 +1,18 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     entry: {
-        'index': __dirname + '/src/index.jsx'
+        'index': path.join(__dirname, 'src', 'index.jsx')
     },
     output: {
-        path: __dirname + '/dist',
+        path: path.join(__dirname, 'dist'),
         filename: '[name].js'
     },
     module: {
         loaders: [{
             test: /\.jsx|\.js$/,
-            exclude: /node_modules/,
+            exclude: /node_modules/,//path.join(__dirname, 'node_modules')
             loader: 'babel-loader'
         }]
     },
