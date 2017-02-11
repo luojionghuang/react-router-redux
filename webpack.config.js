@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -8,7 +9,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
-        publicPath: path.join(__dirname, 'dist')
+        publicPath: '/dist/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.css']//自动识别没带后缀的文件，在import、require或者webpack.config.js中
@@ -21,10 +22,20 @@ module.exports = {
             query: {
                 presets: ['react', 'es2015']
             }
+        }, {
+            test: /\.css$/,
+            loader: 'style!css'
+        }, {
+            test: /\.png|\.jpg|\.gif/,
+            loader: 'url-loader',
+            query: {
+                mimetype: 'image/*'
+            }
         }]
     },
     plugins: [
         new webpack.BannerPlugin('This file is created by ljh'),//文件头部加上作者名称：ljh
+        new HtmlWebpackPlugin(),//自动生成html文件
         new webpack.optimize.UglifyJsPlugin({//压缩webpack打包的文件
             compress: {
                 warnings: false
