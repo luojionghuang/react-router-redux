@@ -24,7 +24,7 @@ module.exports = {
             }
         }, {
             test: /\.css$/,
-            loader: 'style!css'
+            loader: 'style-loader!css-loader'
         }, {
             test: /\.png|\.jpg|\.gif/,
             loader: 'url-loader',
@@ -35,14 +35,14 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin('This file is created by ljh'),//文件头部加上作者名称：ljh
-        new HtmlWebpackPlugin(),//自动生成html文件
-        new webpack.optimize.UglifyJsPlugin({//压缩webpack打包的文件
+        new HtmlWebpackPlugin()//自动生成html文件
+        /*new webpack.optimize.UglifyJsPlugin({//压缩webpack打包的文件
             compress: {
                 warnings: false
             },
             output: {
                 comments: false
             }
-        })
+        })*/
     ]
 };
