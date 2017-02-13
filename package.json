@@ -2,7 +2,7 @@
   "name": "react-router-redux",
   "version": "1.0.0",
   "description": "react-router-redux init",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "start": "webpack-dev-server --progress --colors",
     "build": "webpack --progress --colors --watch"
