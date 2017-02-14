@@ -4,7 +4,7 @@
   "description": "react-router-redux init",
   "main": "index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors",
+    "start": "webpack-dev-server --progress --colors --history-api-fallback",
     "build": "webpack --progress --colors --watch"
   },
   "repository": {

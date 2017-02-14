@@ -1,8 +1,8 @@
-function equipment(state = { count: 0}, action) {
+function home(state = { count: 0}, action) {
     switch(action.type) {
-        case 'EQUIPMENT':
+        case 'HOME':
             return Object.assign({}, state, {
-                count: state.count + 1
+                count: state.count - 1
             });
         default:
             return state;
@@ -10,5 +10,5 @@ function equipment(state = { count: 0}, action) {
 }
 
 module.exports = {
-    equipment
+    home
 };
