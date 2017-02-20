@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: {
@@ -24,7 +25,7 @@ module.exports = {
             }
         }, {
             test: /\.css$/,
-            loader: 'style-loader!css-loader'
+            loader: 'style-loader!css-loader!postcss-loader'
         }, {
             test: /\.png|\.jpg|\.gif/,
             loader: 'url-loader',
@@ -48,6 +49,7 @@ module.exports = {
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
             }
-        })
+        }),
+        autoprefixer//自动补全css3前缀
     ]
 };
