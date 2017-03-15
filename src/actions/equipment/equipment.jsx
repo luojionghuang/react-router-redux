@@ -1,5 +1,5 @@
-function equipment(dispatch) {
-    dispatch({
+function equipment() {
+    return ({
         type: 'EQUIPMENT'
     });
 }

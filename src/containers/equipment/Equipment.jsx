@@ -24,7 +24,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        equipment: () => equipment(dispatch)
+        equipment: () => dispatch(equipment())
     };
 }
 
