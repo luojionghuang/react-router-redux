@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var precss = require('precss');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -50,6 +51,12 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-        autoprefixer//自动补全css3前缀
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: function() {
+                    return [precss, autoprefixer];
+                }
+            }
+        })
     ]
 };
